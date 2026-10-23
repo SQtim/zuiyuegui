@@ -1,8 +1,0 @@
-name = "zuiyuegui"
-main = "api.js"
-compatibility_date = "2026-10-22"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "yuegui-data"
-database_id = "08120e48-4a14-4d2f-bd7c-facbfed5f7a2"
