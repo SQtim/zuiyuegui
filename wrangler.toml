@@ -2,12 +2,10 @@ name = "zuiyuegui"
 main = "api.js"
 compatibility_date = "2026-10-22"
 
-# D1数据库绑定，对应代码里 env.MY_DB
 [[d1_databases]]
 binding = "MY_DB"
 database_name = "yuegui-data"
 database_id = "08120e48-4a14-4d2f-bd7c-facbfed5f7a2"
 
-# 管理密码
 [vars]
 MASTER_PASSWORD = "Ad989958790！"
