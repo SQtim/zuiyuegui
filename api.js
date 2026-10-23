@@ -15,10 +15,10 @@ export default {
     if (url.pathname === "/api/add" && request.method === "POST") {
       try {
         const data = await request.json();
-        const { name, contact, time, remark } = data;
+        const { name, phone, time, remark } = data;
         await env.MY_DB.prepare(
-          `INSERT INTO yuyue (name, contact, time, remark) VALUES (?, ?, ?, ?)`
-        ).bind(name, contact, time, remark).run();
+          `INSERT INTO yuyue (name, phone, time, remark) VALUES (?, ?, ?, ?)`
+        ).bind(name, phone, time, remark).run();
         return Response.json({ ok: true, msg: "提交成功" }, { headers: corsHeaders });
       } catch (e) {
         return Response.json({ ok: false, msg: e.message }, { headers: corsHeaders });
