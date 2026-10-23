@@ -11,7 +11,6 @@ export default {
       return new Response(null, { headers: corsHeaders });
     }
 
-    // 新增接口：提交预约
     if (url.pathname === "/api/add" && request.method === "POST") {
       try {
         const data = await request.json();
@@ -25,7 +24,6 @@ export default {
       }
     }
 
-    // 查询全部预约
     if (url.pathname === "/api/list" && request.method === "GET") {
       const res = await env.MY_DB.prepare(
         `SELECT * FROM yuyue ORDER BY id DESC`
@@ -33,7 +31,6 @@ export default {
       return Response.json({ ok: true, list: res.results }, { headers: corsHeaders });
     }
 
-    // 删除预约（校验密码）
     if (url.pathname === "/api/del" && request.method === "POST") {
       const data = await request.json();
       if (data.pwd !== env.MASTER_PASSWORD) {
